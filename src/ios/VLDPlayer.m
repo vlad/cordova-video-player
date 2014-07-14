@@ -29,7 +29,7 @@
     [self.player prepareToPlay];
     [self.player.view setFrame: self.webView.bounds];
     [self.webView addSubview: self.player.view];
-    [player setFullscreen:YES animated:NO];
+    [player setFullscreen:YES animated:YES];
     [self.player play];
 }
 
