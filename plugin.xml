@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.vlad.player"
+    version="0.1.1">
+
+    <name>VLD Player</name>
+    <description>Cordova Video Player Plugin</description>
+    <keywords>cordova,video,player</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="www/player.js" name="player">
+        <merges target="player" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Player">
+                <param name="ios-package" value="VLDPlayer"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/VLDPlayer.h" />
+	    <source-file src="src/ios/VLDPLayer.m" />
+
+		<framework src="MediaPlayer.framework" weak="true" />
+    </platform>
+</plugin>

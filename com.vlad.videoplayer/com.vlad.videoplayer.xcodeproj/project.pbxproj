@@ -1,0 +1,74 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		A5F52A751962DE9000E1EA40 /* VLDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VLDPlayer.h; path = ../src/ios/VLDPlayer.h; sourceTree = "<group>"; };
+		A5F52A761962DE9000E1EA40 /* VLDPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VLDPlayer.m; path = ../src/ios/VLDPlayer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A5F52A6C1962DD1200E1EA40 = {
+			isa = PBXGroup;
+			children = (
+				A5F52A751962DE9000E1EA40 /* VLDPlayer.h */,
+				A5F52A761962DE9000E1EA40 /* VLDPlayer.m */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		A5F52A6D1962DD1200E1EA40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = A5F52A701962DD1200E1EA40 /* Build configuration list for PBXProject "com.vlad.videoplayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5F52A6C1962DD1200E1EA40;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A5F52A711962DD1200E1EA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A5F52A721962DD1200E1EA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5F52A701962DD1200E1EA40 /* Build configuration list for PBXProject "com.vlad.videoplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F52A711962DD1200E1EA40 /* Debug */,
+				A5F52A721962DD1200E1EA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5F52A6D1962DD1200E1EA40 /* Project object */;
+}
