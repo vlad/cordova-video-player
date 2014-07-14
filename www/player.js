@@ -5,9 +5,6 @@ var exec = require('cordova/exec');
  */
 
 module.exports = {
-//    play: function(language, type, id) {
-//      exec(null, null, "Player", "play", [language, type, id]);
-//    },
     playRegular: function(path) {
       exec(null, null, "Player", "playRegular", [path]);
     }

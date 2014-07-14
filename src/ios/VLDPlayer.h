@@ -9,5 +9,6 @@
 @property (nonatomic,strong) MPMoviePlayerController* player;
 
 - (void)playRegular:(CDVInvokedUrlCommand*)command;
+- (void)HideMoviePlayerUponNotification:(NSNotification *)notification;
 
 @end
