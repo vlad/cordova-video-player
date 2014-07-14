@@ -19,8 +19,10 @@
 
     NSLog(@"movieURL = %@", [movieURL absoluteString]);
     
-    //listen for exit-full-screen notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (MPMoviePlayerDidExitFullscreen:) name:MPMoviePlayerDidExitFullscreenNotification object:nil];
+    //listen for notifications: exit-fullscreen (including Done button) and movie-finished
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (HideMoviePlayerUponNotification:) name:MPMoviePlayerDidExitFullscreenNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (HideMoviePlayerUponNotification:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     
     //initialize and run the movie in the player
     self.player = [[MPMoviePlayerController alloc] initWithContentURL: movieURL];
@@ -31,12 +33,15 @@
     [self.player play];
 }
 
-- (void)MPMoviePlayerDidExitFullscreen:(NSNotification *)notification
+- (void)HideMoviePlayerUponNotification:(NSNotification *)notification
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:MPMoviePlayerDidExitFullscreenNotification
                                                   object:nil];
-    
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:nil];
     [self.player stop];
     [self.player.view removeFromSuperview];
 }
